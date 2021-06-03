@@ -13,15 +13,15 @@ Original file is located at
 ###ML-100K
 """
 
-!wget "http://files.grouplens.org/datasets/movielens/ml-100k.zip"
-!unzip ml-100k.zip
-!ls
+# !wget "http://files.grouplens.org/datasets/movielens/ml-100k.zip"
+# !unzip ml-100k.zip
+# !ls
 
 """###ML-1M"""
 
-!wget "http://files.grouplens.org/datasets/movielens/ml-1m.zip"
-!unzip ml-1m.zip
-!ls
+# !wget "http://files.grouplens.org/datasets/movielens/ml-1m.zip"
+# !unzip ml-1m.zip
+# !ls
 
 """##Importing the libraries"""
 

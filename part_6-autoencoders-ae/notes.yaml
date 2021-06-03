@@ -1,0 +1,16 @@
+Building Stack Autoencoder:
+  - Possible Improvements:
+      - Number of neurons:
+          - "self.fc1 = nn.Linear(nb_movies, 20)"
+          - 20 were chosen but could be modified for better results
+      - Activation Function:
+          - "self.activation = nn.Sigmoid()"
+          - Utilised sigmoid of rectifier, however another one could be chosen to improve the model
+      - Optimizer:
+        - "optimizer = optim.RMSprop(sae.parameters(), lr = 0.01, weight_decay = 0.5)"
+        - RMSprop was chosen over Adadm
+        - Learning rate (lr) can be optimised
+        - weight_decay can be optimised
+    - Epochs:
+          - "nb_epoch = 200"
+          - Could be optimised

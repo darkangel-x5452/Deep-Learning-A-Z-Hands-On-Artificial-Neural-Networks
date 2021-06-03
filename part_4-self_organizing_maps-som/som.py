@@ -11,7 +11,7 @@ Original file is located at
 ##Install MiniSom Package
 """
 
-!pip install MiniSom
+# !pip install MiniSom
 
 """### Importing the libraries"""
 

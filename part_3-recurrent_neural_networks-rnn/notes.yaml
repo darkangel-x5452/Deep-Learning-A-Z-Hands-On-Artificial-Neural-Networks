@@ -1,0 +1,42 @@
+RNN:
+  - Temporal Lobe
+  - Short term memory
+    - Context from previous second (memory) to feed into current memory context
+  - Pass information onto themselves
+  - One to many:
+      - One input produces many outputs
+      - Image to description
+  - Many to One:
+      - Sentence to binary output.
+      - Negative review
+  - Many to Many:
+      - Sentence to another language
+  - Vanishing Gradient Problem:
+      - Previous training weights are not being trained properly
+      - W small means vanising gradient problem
+      - W large means exploding gradient problem
+      - Combat by:
+          - Exploding:
+            - Stop backpropagation at a certain limit
+            - Penalties
+            - Gradient clipping (limit gradient)
+          - Vanishing:
+              - Weight Initialization
+              - Echo State Networks
+              - Long Short-Term Memory Networks (LSTMs) (most popular)
+  - LSTM:
+    - https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+    - Key points:
+        - Value from memory cell (aka pipe) (C)
+        - New value from outside (X)
+        - Value from previous node (h)
+        - Forget Valve
+        - Memory Valve
+        - Output Valve
+        - Sigma (e.g. sigmoid) controls opening closing valves
+
+Building the RNN:
+  -  Normalisation is recommended for Feature Scaling for RNN:
+       - "sc = MinMaxScaler(feature_range = (0, 1))"
+  - Reshaping is a powerful tool to add dimensions to the datasets to add extra options to calculate probabilities and outcomes:
+    - "X_train = np.reshape(X_train, (X_train.shape[0], X_train.shape[1], 1))"

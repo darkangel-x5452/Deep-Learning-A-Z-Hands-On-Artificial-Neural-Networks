@@ -1,0 +1,19 @@
+datasets:
+  - movies.dat:
+      - movie id
+      - movie name
+      - movie genre
+  - users.dat:
+      - user id
+      - user gender
+      - user age
+      - user job id
+      - user zipcode
+  - ratings.dat:
+      - user id
+      - movie id
+      - user rating
+      - user rating timestamp (irrelevant)
+
+building bm:
+  - Quite complicated and should review to understand theory further and come implications

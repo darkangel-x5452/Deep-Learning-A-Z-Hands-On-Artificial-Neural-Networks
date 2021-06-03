@@ -1,0 +1,26 @@
+Training som:
+  - 1. Get Dataset:
+    - Dataset with n_features of independent variables
+  - 2. Create Grid:
+    - Create grid composed of nodes, each one having a weight vector of n_features elements
+  - 3. Initialise Weight:
+    - Randomly initialise the values of the weight vectors to small numbers close to 0 (not 0)
+  - 4. Select Random Point:
+    - Select one random observation point from dataset
+  - 5. Compute Euclidean:
+    - Compute Euclidean distances from this point to the different neurons in the network
+  - 6. Select Winning Node:
+    - Select the neuron that has the min distance to the point. This neuron is the winning node
+  - 7. Update Weights:
+    - Update the weights of the winning node to move it closer to the point
+  - 8. Use Gaussian Neighbourhood Function:
+    - Using Gaussian neighbourhood function of mean the winning node, also update the weights of the winning node neighbours to move them closer to the point. The neighbourhood radius is the sigma in the Gaussian function
+  - 9. Repeat steps 1 to 5:
+    - Repeat steps 1 to 5 and update the weights after each observation (reinforcement learning) or after a batch of observations (batch learning) until the network converges to a point where the neighbourhood stops decreasing
+
+Building SOM:
+  - "MiniSom(x=10, y=10, input_len= 15, sigma= 1.0, learning_rate = 0.5)"
+    - x, y: arbiturary choice. Lower less accurate, higher more accurate for outliers. Grid parameter
+    - input_len: number of features of x
+    - sigma: radius of of different neighbourhoods
+    - learning_rate: hyper parameter, decides how much the weights are updated for each iteration. The higher the rate, the faster convergence, the lower the longer it takes to build the som

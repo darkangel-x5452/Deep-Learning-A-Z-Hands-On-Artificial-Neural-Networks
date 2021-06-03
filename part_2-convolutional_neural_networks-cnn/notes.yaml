@@ -1,0 +1,30 @@
+Building the CNN:
+  Step 1 - Convolution:
+    - Input Image X Feature Detector = Feature Map
+    - "cnn.add(tf.keras.layers.Conv2D(filters=32, kernel_size=3, activation='relu', input_shape=[64, 64, 3]))"
+      - filters: Number of feature detectors (maps?) to be created
+      - kernal_size: Feature detector frame size
+      - activiation: Trigger the neuron
+      - input_shape: Has to be specified for the first layer. [(size of image), colour shading of image]
+
+  Step 2 - Max Pooling:
+    - Feature Map to Pooled Feature Map
+    - "cnn.add(tf.keras.layers.MaxPool2D(pool_size=2, strides=2))"
+      - pool_size: specified frame to select max pixel
+      - strides: specified frame shift count
+
+    - Second Convolution Layer:
+      - "cnn.add(tf.keras.layers.Conv2D(filters=32, kernel_size=3, activation='relu'))"
+      - "cnn.add(tf.keras.layers.MaxPool2D(pool_size=2, strides=2))"
+
+  Step 3 - Flatten Layer:
+    - cnn.add(tf.keras.layers.Flatten())
+    - Creates one dimensional layer
+
+  Step 4 - Full Connection:
+    - Create fully connected neural network
+    - "cnn.add(tf.keras.layers.Dense(units=128, activation='relu'))"
+
+  Step 5 - Output Layer:
+      - "cnn.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))"
+

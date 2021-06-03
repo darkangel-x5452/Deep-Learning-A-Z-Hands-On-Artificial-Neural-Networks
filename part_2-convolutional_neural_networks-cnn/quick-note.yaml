@@ -1,0 +1,29 @@
+Quick Note
+Hi everyone!
+
+Hope you are enjoying the CNN section. First, we want to say thank you to the students who have brought this to our attention as we continue to work to keep materials up to date and revised due to any bugs. Please find the original thread here: https://www.udemy.com/instructor/communication/qa/12300918 as it also contains a great discussion for normalization. Thank you to Pau for posting this Q&A discussion!
+
+First, please normalize the images and to do so you can modify line 6 of Part 4 - Making a single prediction to:
+
+result = cnn.predict(test_image/255.0)
+
+Next, we are using:
+
+if result[0][0]==1
+
+This will return inaccurate results if the prediction confidence isn't exactly 1.
+
+In order to have higher accuracy regarding the single prediction for the CNN we have to make a slight code change.
+
+For the predict function please use:
+
+if result[0][0] > 0.5:
+         prediction = ‘dog’
+
+Also, please feel free to test and try to optimize the code further - it's an incredible way to help learn and reinforce any of the concepts from the course.
+
+As always, if you have any questions please let us know in the Q&A and enjoy DL!
+
+Best Regards,
+
+SDS Support Team
